@@ -9,6 +9,10 @@
   },
   "license": "MIT",
   "author": "NONPLAYT",
+  "dependencies": {
+    "yaml": "^2.5.0",
+    "vue": "^3.4.27"
+  },
   "devDependencies": {
     "@nolebase/vitepress-plugin-enhanced-mark": "2.0.0-rc2",
     "@nolebase/vitepress-plugin-enhanced-readabilities": "1.28.0",
@@ -24,8 +28,5 @@
   "bugs": {
     "url": "https://github.com/BX-Team/docs/issues"
   },
-  "homepage": "https://docs.bx-team.space",
-  "dependencies": {
-    "yaml": "^2.5.0"
-  }
+  "homepage": "https://docs.bx-team.space"
 }

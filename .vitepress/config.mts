@@ -1,12 +1,27 @@
 import { defineConfig, type DefaultTheme } from 'vitepress'
 
 export default defineConfig({
-  title: "BX Team Documentation",
-  description: "Documentation for all BX Team projects.",
-
+  vite: {
+    optimizeDeps: {
+      include: [
+        '@nolebase/vitepress-plugin-enhanced-readabilities > @nolebase/ui > @rive-app/canvas',
+      ],
+      exclude: [
+        '@nolebase/vitepress-plugin-enhanced-readabilities/client',
+      ],
+    },
+    ssr: {
+      noExternal: [
+        '@nolebase/vitepress-plugin-enhanced-readabilities',
+      ],
+    },
+  },
   srcDir: './src',
   cleanUrls: true,
   lastUpdated: true,
+
+  title: "BX Team Documentation",
+  description: "Documentation for all BX Team projects.",
 
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
