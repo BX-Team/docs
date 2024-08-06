@@ -12,12 +12,19 @@ import {
 } from '@nolebase/vitepress-plugin-enhanced-readabilities'
 import '@nolebase/vitepress-plugin-enhanced-readabilities/dist/style.css'
 
+import { 
+  NolebaseGitChangelogPlugin 
+} from '@nolebase/vitepress-plugin-git-changelog/client'
+
+import '@nolebase/vitepress-plugin-git-changelog/client/style.css'
+
 import './index.css'
 
 export default {
   ...DefaultTheme,
   enhanceApp: (ctx) => {
     vitepressNprogress(ctx)
+    ctx.app.use(NolebaseGitChangelogPlugin)
   },
   Layout: () => {
     return h(DefaultTheme.Layout, null, {

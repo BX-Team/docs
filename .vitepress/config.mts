@@ -1,7 +1,15 @@
 import { defineConfig, type DefaultTheme } from 'vitepress'
+import { GitChangelog, GitChangelogMarkdownSection } from '@nolebase/vitepress-plugin-git-changelog/vite'
 
 export default defineConfig({
   vite: {
+    plugins: [ 
+      GitChangelog({ 
+        repoURL: () => 'https://github.com/BX-Team/docs', 
+      }), 
+      GitChangelogMarkdownSection(), 
+    ],
+
     optimizeDeps: {
       include: [
         '@nolebase/vitepress-plugin-enhanced-readabilities > @nolebase/ui > @rive-app/canvas',
