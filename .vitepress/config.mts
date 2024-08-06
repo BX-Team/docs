@@ -43,6 +43,7 @@ export default defineConfig({
     sidebar: {
       '/divinemc/': { base: '/divinemc/', items: sidebarDivineMC() },
       '/ndailyrewards/': { base: '/ndailyrewards/', items: sidebarNDailyRewards() },
+      '/realworldsync/': { base: '/realworldsync/', items: sidebarRealWorldSync() },
     },
 
     editLink: {
@@ -141,6 +142,31 @@ function sidebarNDailyRewards(): DefaultTheme.SidebarItem[] {
         { text: 'HEX Colors', link: '/docs/hex-colors' },
         { text: 'Warmup system', link: '/docs/warmup' },
         { text: 'Custom Head Textures', link: '/docs/head-texture' },
+      ]
+    }
+  ]
+}
+
+function sidebarRealWorldSync(): DefaultTheme.SidebarItem[] {
+  return [
+    {
+      items: [
+        { text: 'Overview', link: '/' }
+      ]
+    },
+    {
+      text: 'Guides',
+      items: [
+        { text: 'Setting up plugin', link: '/guides/setting-up-plugin' },
+        { text: 'Setting up time/weather sync', link: '/guides/setting-up-weather-sync' }
+      ]
+    },
+    {
+      text: 'Documentation',
+      items: [
+        { text: 'Commands', link: '/docs/commands' },
+        { text: 'Config files', link: '/docs/config-files' },
+        { text: 'Placeholders', link: '/docs/placeholders' }
       ]
     }
   ]
