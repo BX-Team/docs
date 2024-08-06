@@ -17,6 +17,9 @@ export default defineConfig({
     externalLinkIcon: true,
     logo: 'logo.png',
     nav: nav(),
+    sidebar: {
+      '/divinemc/': { base: '/divinemc/', items: sidebarDivineMC() },
+    },
 
     editLink: {
       pattern: 'https://github.com/BX-Team/docs/edit/master/src/:path',
@@ -65,5 +68,29 @@ function nav(): DefaultTheme.NavItem[] {
         }
       ],
     },
+  ]
+}
+
+function sidebarDivineMC(): DefaultTheme.SidebarItem[] {
+  return [
+    {
+      text: 'Documentation',
+      items: [
+        { text: 'Overview', link: '/' }
+      ]
+    },
+    {
+      text: 'Administration',
+      items: [
+        { text: 'Getting Started', link: '/admin/getting-started' },
+        { text: 'Configuration', link: '/admin/configuration' }
+      ]
+    },
+    {
+      text: 'Development',
+      items: [
+        { text: 'Contributing to DivineMC', link: '/dev/contributing' }
+      ]
+    }
   ]
 }

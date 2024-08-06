@@ -1,0 +1,91 @@
+verbose:
+  default: 'false'
+  description: 'Sets whether the server should dump all configuration values to the server log on startup'
+settings:
+  optimizations:
+    biome-manager-optimization:
+      default: 'true'
+      description: 'Enables or disables optimization of biomes from the CarpetFixes mod. Makes getBiome() method faster by 25% - 75%'
+    optimized-dragon-respawn:
+      default: 'true'
+      description: 'Enables or disables optimization of better dragon respawn (from Carpet-AMS-Addition mod)'
+    optimize-noise-generation:
+      default: 'true'
+      description: 'Enables or disables optimization of better perlin noise generation'
+    sheep-optimization:
+      default: 'true'
+      description: 'Enables or disables optimization of sheep color choosing from the CarpetFixes mod. The game determines the child sheeps color by getting a wool block from the parents, putting them in a crafting recipe, getting the output wool and getting the color from that.'
+  misc:
+    disable-non-editable-sign-warning:
+      default: 'true'
+      description: 'This setting disables warning when player tries to change the non-editable sign'
+    remove-vanilla-username-check:
+      default: 'false'
+      description: 'Removes vanilla username check, allowing to join the server with any characters in username'
+    disable-moved-wrongly-threshold:
+      default: 'false'
+      description: 'Disable moved quickly/wrongly checks warns in console'
+    enable-secure-seed:
+      default: 'false'
+      description: 'Enabling this, default 64-bit seed will be changed to a 1024-bit seed, making it almost impossible to crack the seed.'
+  region-format:
+    linear:
+      flush-frequency:
+        default: '10'
+        description: 'Time in seconds after which chunks will be flushed'
+      flush-max-threads:
+        default: '1'
+        description: 'Maximum number of threads for flushing chunks'
+  no-chat-sign:
+    default: 'true'
+    description: 'If the value is set to true, then chat reports and chat signing in chat will not be available.'
+  async-pathfinding:
+    enable:
+      default: 'true'
+      description: 'Enables or disables async pathfinding feature'
+    max-threads:
+      default: '0'
+      description: 'Specifies how many threads to use for async pathfinding. If you specify 0, then the maximum amount will be calculated by itself using the formula: `availableProcessors / 4`'
+    keepalive:
+      default: '60'
+      description: 'The time during which inactive threads will remain in the pool until they are completed after downtime, specified in seconds.'
+world-settings:
+  gameplay-mechanics:
+    mob:
+      shulker:
+        despawn-bullets-on-player-death:
+          default: 'true'
+          description: 'If player is dead from shulker - bullets disappering for optimization'
+    boat:
+      dont-eject-players-from-boat-underwater:
+        default: 'true'
+        description: 'Players cant be ejected from boat underwater'
+      always-allow-to-enter-the-boat:
+        default: 'true'
+        description: 'Player can enter the boat anywhere'
+    projectiles:
+      snowball:
+        knockback:
+          default: 'true'
+          description: 'Enables or disables knocking back with snowball'
+      egg:
+        knockback:
+          default: 'true'
+          description: 'Enables or disables knocking back with egg'
+    should-save-fireworks:
+      default: 'false'
+      description: 'Switches the saving of fireworks in the world'
+  suppress-errors-from-dirty-attributes:
+    default: 'true'
+    description: '???'
+  region-format:
+    format:
+      default: 'ANVIL'
+      description: '2 types available: ANVIL and LINEAR'
+    linear:
+      compression-level:
+        default: '1'
+        description: 'Compression ratio of the region'
+config-version:
+  default: '3'
+  description: 'DivineMC configuration file version. DO NOT CHANGE IT!'
