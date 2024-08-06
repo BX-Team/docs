@@ -19,6 +19,7 @@ export default defineConfig({
     nav: nav(),
     sidebar: {
       '/divinemc/': { base: '/divinemc/', items: sidebarDivineMC() },
+      '/ndailyrewards/': { base: '/ndailyrewards/', items: sidebarNDailyRewards() },
     },
 
     editLink: {
@@ -90,6 +91,33 @@ function sidebarDivineMC(): DefaultTheme.SidebarItem[] {
       text: 'Development',
       items: [
         { text: 'Contributing to DivineMC', link: '/dev/contributing' }
+      ]
+    }
+  ]
+}
+
+function sidebarNDailyRewards(): DefaultTheme.SidebarItem[] {
+  return [
+    {
+      items: [
+        { text: 'Overview', link: '/' }
+      ]
+    },
+    {
+      text: 'Guides',
+      items: [
+        { text: 'Commands', link: '/guides/commands' },
+        { text: 'Configuration', link: '/guides/configuration' }
+      ]
+    },
+    {
+      text: 'Documentation',
+      items: [
+        { text: 'Placeholders', link: '/docs/placeholders' },
+        { text: 'Custom Model Data', link: '/docs/model-data' },
+        { text: 'HEX Colors', link: '/docs/hex-colors' },
+        { text: 'Warmup system', link: '/docs/warmup' },
+        { text: 'Custom Head Textures', link: '/docs/head-texture' },
       ]
     }
   ]
