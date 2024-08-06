@@ -1,0 +1,31 @@
+{
+  "name": "docs",
+  "version": "1.0.0",
+  "description": "Documentation for all BX Team projects.",
+  "scripts": {
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
+  },
+  "license": "MIT",
+  "author": "NONPLAYT",
+  "devDependencies": {
+    "@nolebase/vitepress-plugin-enhanced-mark": "2.0.0-rc2",
+    "@nolebase/vitepress-plugin-enhanced-readabilities": "1.28.0",
+    "@types/node": "^20.12.12",
+    "prettier": "3.2.5",
+    "vitepress": "^1.3.1",
+    "vitepress-plugin-nprogress": "^0.0.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BX-Team/docs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BX-Team/docs/issues"
+  },
+  "homepage": "https://docs.bx-team.space",
+  "dependencies": {
+    "yaml": "^2.5.0"
+  }
+}
