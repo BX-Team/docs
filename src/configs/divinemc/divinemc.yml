@@ -81,7 +81,7 @@ world-settings:
   region-format:
     format:
       default: 'ANVIL'
-      description: '2 types available: ANVIL and LINEAR'
+      description: '2 types available: [ANVIL](https://minecraft.wiki/w/Region_file_format) and [LINEAR](https://github.com/xymb-endcrystalme/LinearRegionFileFormatTools?tab=readme-ov-file#linear-region-file-format-for-minecraft)'
     linear:
       compression-level:
         default: '1'

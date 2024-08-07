@@ -99,7 +99,6 @@ function nav(): DefaultTheme.NavItem[] {
 function sidebarDivineMC(): DefaultTheme.SidebarItem[] {
   return [
     {
-      text: 'Documentation',
       items: [
         { text: 'Overview', link: '/' }
       ]
