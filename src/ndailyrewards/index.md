@@ -21,13 +21,13 @@ You can change the amount of days in a row from 1 to 54!
 - Set clickable NPC's **(Requires Citizens plugin)**
 - Fully customizable!
 - Unlock rewards after the midnight (Optional)
-- [Warmup system](https://github.com/BX-Team/NDailyRewards/wiki/Warmup-system)
-- Have custom [placeholders](https://github.com/BX-Team/NDailyRewards/wiki/Placeholders)
-- [HEX](https://github.com/BX-Team/NDailyRewards/wiki/HEX-Colors) color code support
+- [Warmup system](/ndailyrewards/docs/warmup)
+- Have custom [placeholders](/ndailyrewards/docs/placeholders)
+- [HEX](/ndailyrewards/docs/hex-colors) color code support
 - Define the time between the rewards!
 - Execute commands and send messages in rewards!
 - GUI Fully customizable
-- [Custom model data](https://github.com/BX-Team/NDailyRewards/wiki/Custom-Model-Data) support!
+- [Custom model data](/ndailyrewards/docs/model-data) support!
 - You can change amount of days in a row to reward
 - Auto opens on join (toggleable)
 - Autosaves player data every X mins

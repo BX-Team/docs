@@ -13,5 +13,5 @@ Example:
 
 ![image](https://github.com/BX-Team/NDailyRewards/assets/76615486/59132fce-a6af-4c37-895d-81d83c8baf0a)
 
-With this feature, new [placeholder](https://github.com/BX-Team/NDailyRewards/wiki/Placeholders) was added - `%ndr_warmup_reward_time%`. This placeholder shows the time left to get reward including warmup time
+With this feature, new [placeholder](/ndailyrewards/docs/placeholders) was added - `%ndr_warmup_reward_time%`. This placeholder shows the time left to get reward including warmup time
 
