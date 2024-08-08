@@ -84,10 +84,6 @@ function nav(): DefaultTheme.NavItem[] {
           link: 'https://modrinth.com/organization/bx-team',
         },
         {
-          text: 'Jenkins',
-          link: 'https://jenkins.bx-team.space',
-        },
-        {
           text: 'Maven repository',
           link: 'https://repo.bx-team.space',
         }
