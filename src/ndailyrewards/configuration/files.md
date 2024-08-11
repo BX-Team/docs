@@ -73,7 +73,7 @@ rewards:
       lore:
         - "&7&lRewards:"
         - "&6- &e1x &6Diamond"
-      rewards:
+      actions:
         - "[console] give <player> diamond 1"
         - "[message] &6You have claimed your reward!"
         - "[sound] ENTITY_EXPERIENCE_ORB_PICKUP:1:1"
@@ -82,7 +82,7 @@ rewards:
       lore:
         - "&7&lRewards:"
         - "&6- &e2x &6Diamond"
-      rewards:
+      actions:
         - "[console] give <player> diamond 2"
         - "[message] &6You have claimed your reward!"
         - "[sound] ENTITY_EXPERIENCE_ORB_PICKUP:1:1"
@@ -91,7 +91,7 @@ rewards:
       lore:
         - "&7&lRewards:"
         - "&6- &e3x &6Diamond"
-      rewards:
+      actions:
         - "[console] give <player> diamond 3"
         - "[message] &6You have claimed your reward!"
         - "[sound] ENTITY_EXPERIENCE_ORB_PICKUP:1:1"
@@ -100,7 +100,7 @@ rewards:
       lore:
         - "&7&lRewards:"
         - "&6- &e4x &6Diamond"
-      rewards:
+      actions:
         - "[console] give <player> diamond 4"
         - "[message] &6You have claimed your reward!"
         - "[sound] ENTITY_EXPERIENCE_ORB_PICKUP:1:1"
@@ -109,7 +109,7 @@ rewards:
       lore:
         - "&7&lRewards:"
         - "&6- &e5x &6Diamond"
-      rewards:
+      actions:
         - "[console] give <player> diamond 5"
         - "[message] &6You have claimed your reward!"
         - "[sound] ENTITY_EXPERIENCE_ORB_PICKUP:1:1"
@@ -118,7 +118,7 @@ rewards:
       lore:
         - "&7&lRewards:"
         - "&6- &e6x &6Diamond"
-      rewards:
+      actions:
         - "[console] give <player> diamond 6"
         - "[message] &6You have claimed your reward!"
         - "[sound] ENTITY_EXPERIENCE_ORB_PICKUP:1:1"
@@ -127,7 +127,7 @@ rewards:
       lore:
         - "&7&lRewards:"
         - "&6- &e7x &6Diamond"
-      rewards:
+      actions:
         - "[console] give <player> diamond 7"
         - "[message] &6You have claimed your reward!"
         - "[sound] ENTITY_EXPERIENCE_ORB_PICKUP:1:1"
@@ -140,7 +140,6 @@ gui:
       available:
         material: "EMERALD_BLOCK:1"
         name: "&aDay <dayNum>"
-        custom-model-data: 0
         lore:
           - "&7Your Reward Awaits"
           - "&7Click Me to claim your prize!"
@@ -149,7 +148,6 @@ gui:
       claimed:
         material: "COAL_BLOCK:1"
         name: "&aDay <dayNum>"
-        custom-model-data: 0
         lore:
           - "&7You have claimed this reward"
           - ""
@@ -157,7 +155,6 @@ gui:
       next:
         material: "COAL_BLOCK:1"
         name: "&aDay <dayNum>"
-        custom-model-data: 0
         lore:
           - "&7Your Reward Will Be Here Soon"
           - "&7Wait <time-left>"
@@ -166,7 +163,6 @@ gui:
       unavailable:
         material: "BARRIER:1"
         name: "&aDay <dayNum>"
-        custom-model-data: 0
         lore:
           - "&7You have not reached this day yet"
           - ""
@@ -250,7 +246,7 @@ You can use alternative method to create gradient text by using [this](https://w
 :::
 
 ### Custom Model Data
-You can use custom model data in the GUI configuration. This feature allows you to use custom textures for items in the GUI. To use this feature, you need to specify the custom model data number in the `custom-model-data` field. 
+You can use custom model data in the GUI configuration. This feature allows you to use custom textures for items in the GUI. To use this feature, you need to change `material` field. 
 
 ```yaml
 gui:
@@ -259,9 +255,8 @@ gui:
     size: 27
     display:
       available:
-        material: "EMERALD_BLOCK:1"
+        material: "CustomModel[<MATERIAL>:<QUANTITY>][INT]" // [!code highlight]
         name: "&aDay <dayNum>"
-        custom-model-data: 0 // [!code highlight]
         lore:
           - "&7Your Reward Awaits"
           - "&7Click Me to claim your prize!"
@@ -270,7 +265,10 @@ gui:
 ```
 
 ### Custom player head textures
-You can use custom head textures in the GUI configuration. This feature allows you to set custom head for items in the GUI. To make this feature work, you need to have original texture value from website like **minecraft-heads.com**. On the bottom of any head page, there will be *Minecraft-URL*. You need to copy the value from there and paste it in the `player-head-texture` field.
+You can use custom head textures in the GUI configuration. This feature allows you to set custom head for items in the GUI. To use this feature, you need to change `material` field. Plugin have some other types of custom player heads:
+- **URL** - Link to head texture
+- **UUID** - UUID of player
+- **BASE64** - Base64 texture string
 
 ```yaml
 gui:
@@ -279,9 +277,8 @@ gui:
     size: 27
     display:
       available:
-        material: "EMERALD_BLOCK:1"
+        material: "CustomSkull[PLAYER_HEAD]{URL:https://textures.minecraft.net/texture/dba489a53d9465f33836355ad09c22d5d2593e61bfab45fc19062a751c4005a2}" // [!code highlight]
         name: "&aDay <dayNum>"
-        player-head-texture: dba489a53d9465f33836355ad09c22d5d2593e61bfab45fc19062a751c4005a2 // [!code highlight]
         lore:
           - "&7Your Reward Awaits"
           - "&7Click Me to claim your prize!"
