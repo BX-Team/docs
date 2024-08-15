@@ -28,17 +28,30 @@ database:
   # Select here the database you want to use
   # The following databases are supported:
   #  - sqlite - (default) stores all data in a local file
-  #  - mysql - allows using a remote database
+  #  - mariadb - allows using a remote database
   type: sqlite
 
   # SQLite configuration
   sqlite:
     file: "ndailyrewards.db"
   # MySQL configuration
-  mysql:
-    jdbc: "jdbc:mysql://localhost:3306/ndailyrewards"
+  mariadb:
+    jdbc: "jdbc:mariadb://localhost:3306/ndailyrewards"
     username: "root"
     password: "password"
+
+  # Advanced configuration for Database (do not touch unless you know what you are doing)
+  # Comment out any data source property to disable setting it.
+  cachePrepStmts: true
+  prepStmtCacheSize: 250
+  prepStmtCacheSqlLimit: 2048
+  useServerPrepStmts: true
+  useLocalSessionState: true
+  rewriteBatchedStatements: true
+  cacheResultSetMetadata: true
+  cacheServerConfiguration: true
+  elideSetAutoCommits: true
+  maintainTimeStats: false
 
 # Player events
 events:
@@ -209,7 +222,7 @@ commands:
     - "&f/reward setday <player> <day> &7- Set player's day"
     - "&f/reward version &7- Show plugin version"
   reload: "&aPlugin reloaded!"
-  setday: "&aSet &e<player> &6current day to &e<day>"
+  setday: "&aSet &e<player> &acurrent day to &e<day>"
 
 events:
   notify-when-available: "&6You have available rewards! Use &f/reward &6to open the menu"
@@ -277,7 +290,7 @@ gui:
     size: 27
     display:
       available:
-        material: "CustomSkull[PLAYER_HEAD]{URL:https://textures.minecraft.net/texture/dba489a53d9465f33836355ad09c22d5d2593e61bfab45fc19062a751c4005a2}" // [!code highlight]
+        material: "CustomSkull[PLAYER_HEAD:1]{URL:https://textures.minecraft.net/texture/dba489a53d9465f33836355ad09c22d5d2593e61bfab45fc19062a751c4005a2}" // [!code highlight]
         name: "&aDay <dayNum>"
         lore:
           - "&7Your Reward Awaits"
