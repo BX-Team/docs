@@ -11,4 +11,35 @@ Registered events that you can listen to:
 - `PlayerReceiveReminderEvent` - called when a player receives a reminder about available rewards.
 
 ## Examples
-<!--- fill this soon --->
+### AutoClaimEvent
+```java
+@EventHandler
+public void playerAutoClaimEvent(AutoClaimEvent event) {
+    Player player = event.getPlayer();
+    int day = event.getDay();
+
+    player.sendMessage("You have claimed the reward for day " + day + " automatically!");
+}
+```
+
+### PlayerClaimRewardEvent
+```java
+@EventHandler
+public void playerClaimRewardEvent(PlayerClaimRewardEvent event) {
+    Player player = event.getPlayer();
+    int day = event.getDay();
+
+    player.sendMessage("You have claimed the reward for day " + day + "!");
+}
+```
+
+### PlayerReceiveReminderEvent
+```java
+@EventHandler
+public void playerRemindEvent(PlayerReceiveReminderEvent event) {
+    Player player = event.getPlayer();
+    int day = event.getDay();
+
+    player.sendMessage("You received a reminder for a new reward on day " + day);
+}
+```
