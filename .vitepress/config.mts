@@ -26,7 +26,6 @@ export default defineConfig({
   },
   srcDir: './src',
   cleanUrls: true,
-  lastUpdated: true,
 
   title: "BX Team Documentation",
   description: "Documentation for all BX Team projects.",
@@ -123,20 +122,22 @@ function sidebarNDailyRewards(): DefaultTheme.SidebarItem[] {
       ]
     },
     {
-      text: 'Guides',
+      text: 'Usage',
       items: [
-        { text: 'Commands', link: '/guides/commands' },
-        { text: 'Configuration', link: '/guides/configuration' }
+        { text: 'Commands', link: '/usage/commands' }
       ]
     },
     {
-      text: 'Documentation',
+      text: 'Configuration',
       items: [
-        { text: 'Placeholders', link: '/docs/placeholders' },
-        { text: 'Custom Model Data', link: '/docs/model-data' },
-        { text: 'HEX Colors', link: '/docs/hex-colors' },
-        { text: 'Warmup system', link: '/docs/warmup' },
-        { text: 'Custom Head Textures', link: '/docs/head-texture' },
+        { text: 'Config & Modifications', link: '/configuration/files' },
+        { text: 'Placeholders', link: '/configuration/placeholders' }
+      ]
+    },
+    {
+      text: 'API',
+      items: [
+        { text: 'Events', link: '/api/events' }
       ]
     }
   ]
