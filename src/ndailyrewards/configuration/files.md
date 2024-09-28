@@ -57,6 +57,8 @@ database:
 events:
   # Whether a reward should automatically claim when a player joins (if available)
   auto-claim-reward: false
+  # Delay in seconds before the reward is automatically claimed
+  auto-claim-delay: 10
   # When player joins the server, should plugin open the reward GUI?
   open-gui-when-available: false
   # When player joins the server, should plugin notify player about available rewards?
@@ -66,6 +68,8 @@ events:
 rewards:
   # When a player reaches the day limit, should it reset to the first day?
   reset-when-all-claimed: true
+  # When player joins server for the first time, should the reward be available?
+  first-join-reward: false
   # Specify how many days the player has to wait to claim the reward again (in hours)
   cooldown: 24
   # Should next day unlock after midnight?
@@ -78,6 +82,10 @@ rewards:
   # [title] - sends primary title with entered text
   # [subtitle] - sends secondary title with entered text
   # [sound] - plays specified sound for the player (sound:volume:pitch)
+  # [permission] {ndailyrewards.permission} - checks if player has permission
+  # [luck] {0-100} - executes the statement with a specified chance (0-100)
+  # [permluck] {ndailyrewards.permission:0-100} - executes the statement with a specified chance (0-100) if player has permission
+  # [close] - closes the inventory for the player
   # You can also use PlaceholderAPI placeholders (requires PlaceholderAPI plugin)
   # Note: First slot in inventory is 0, not 1
   days:
@@ -180,13 +188,14 @@ gui:
           - "&7You have not reached this day yet"
           - ""
           - "<reward-lore>"
-
-    other:
       filler:
         enable: true
         material: "GRAY_STAINED_GLASS_PANE:1"
         name: "&7"
-        lore: []
+        lore: [ ]
+
+    # Custom GUI items
+    custom: [ ]
 
 sound:
   open:
@@ -298,3 +307,26 @@ gui:
           - ""
           - "<reward-lore>"
 ```
+
+### Custom GUI Buttons
+You can use custom GUI buttons in the GUI configuration and add actions to it as in rewards. To use this feature, you need to change `custom` field. 
+
+```yaml
+gui:
+  reward:
+    ...
+
+    # Custom GUI items
+    custom:
+      example:
+        position: 26
+        material: "DIAMOND:1"
+        name: "&6Example"
+        lore:
+          - "&7This is an example button"
+        actions:
+          - "[message] &6You clicked the example button!"
+          - "[sound] ENTITY_EXPERIENCE_ORB_PICKUP:1:1"
+```
+
+In material field you can use all modifications that was written above.
