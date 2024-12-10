@@ -9,8 +9,8 @@ How to get docs running on your local machine for development.
 
 ### Prerequisites
 
-- [node](https://nodejs.org)
-- [npm](https://www.npmjs.com/)
+-   [node](https://nodejs.org)
+-   [npm](https://www.npmjs.com/)
 
 ### Local Development
 
