@@ -21,17 +21,14 @@ features:
       title: DivineMC
       details: DivineMC is the fork of Purpur compatible with Spigot plugins, offering the best performance for your server.
       link: /documentation/divinemc/
-      linkText: Documentation
     - icon: 💵
       title: NDailyRewards
       details: NDailyRewards gives you ability to give daily rewards for your players for playing on your server.
       link: /documentation/ndailyrewards/
-      linkText: Documentation
     - icon: ☁️
       title: RealWorldSync
       details: Synchronizes time and weather from the real world to the game.
       link: /documentation/realworldsync/
-      linkText: Documentation
 ---
 
 <script setup>

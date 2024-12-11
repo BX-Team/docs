@@ -22,15 +22,15 @@ const vitepressSidebarOptions: VitePressSidebarOptions[] = [
     ]),
 
     createSidebarOptions("/documentation/ndailyrewards/", [
-        "api",
-        "events.md",
-
         "configuration",
         "files.md",
         "placeholders.md",
 
         "usage",
         "commands.md",
+
+        "development",
+        "events.md",
     ]),
 
     createSidebarOptions("/documentation/realworldsync/", [
@@ -67,6 +67,21 @@ function postProcessSidebar(sidebar: Sidebar): Sidebar {
     if (Array.isArray(sidebar)) {
         return sidebar;
     }
+
+    sidebar["/documentation/introduction/"] = {
+        base: "/documentation/",
+        items: [
+            {
+                text: "Projects",
+                link: "/introduction/projects",
+                items: [
+                    { text: "DivineMC", link: "/divinemc" },
+                    { text: "NDailyRewards", link: "/ndailyrewards" },
+                    { text: "RealWorldSync", link: "/realworldsync" },
+                ],
+            },
+        ],
+    };
 
     for (const [, sidebarMultiItem] of Object.entries(sidebar)) {
         processItem(sidebarMultiItem);
