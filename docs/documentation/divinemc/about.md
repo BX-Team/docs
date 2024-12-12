@@ -21,5 +21,6 @@ DivineMC is the fork of Purpur compatible with Spigot plugins, offering the best
 
 You can find the documentation for DivineMC in the following sections:
 
-<a href="administration" class="docs-button">Administration</a>
-<a href="development" class="docs-button">Development</a>
+<a href="guides/getting-started" class="docs-button">Guides</a>
+<a href="reference/configuration" class="docs-button">Reference</a>
+<a href="development/contributing" class="docs-button">Contributing</a>
