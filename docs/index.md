@@ -20,7 +20,7 @@ features:
     - icon: 🪨
       title: DivineMC
       details: DivineMC is the fork of Purpur compatible with Spigot plugins, offering the best performance for your server.
-      link: /documentation/divinemc/
+      link: /documentation/divinemc/about
     - icon: 💵
       title: NDailyRewards
       details: NDailyRewards gives you ability to give daily rewards for your players for playing on your server.

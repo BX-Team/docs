@@ -13,9 +13,16 @@ export function createSidebar(): Sidebar {
 
 const vitepressSidebarOptions: VitePressSidebarOptions[] = [
     createSidebarOptions("/documentation/divinemc/", [
-        "administration",
-        "configuration.md",
+        "about.md",
+        "versions.md",
+
+        "guides",
         "getting-started.md",
+        "next-steps.md",
+
+        "reference",
+        "configuration.md",
+        "system-properties.md",
 
         "development",
         "contributing.md",
