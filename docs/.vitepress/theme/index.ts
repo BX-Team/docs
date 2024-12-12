@@ -23,10 +23,14 @@ import "@nolebase/vitepress-plugin-git-changelog/client/style.css";
 import "@nolebase/vitepress-plugin-enhanced-mark/client/style.css";
 import "./patches/enhanced-mark-patch.css";
 
+import { CodeTabsClientPlugin } from "../codetabs/CodeTabsClientPlugin";
+
 import SocialBlock from "../../components/discord/DiscordBlock.vue";
 
+import "virtual:group-icons.css";
 import "./index.css";
 import "./patches/buttons-patch.css";
+import "./patches/codetab-patch.css";
 import "./patches/sidebar-patch.css";
 
 export default {
@@ -42,6 +46,7 @@ export default {
     enhanceApp({ app }) {
         app.use(NolebaseInlineLinkPreviewPlugin);
         app.use(NolebaseGitChangelogPlugin);
+        app.use(CodeTabsClientPlugin());
 
         app.provide(InjectEnhancedReadabilities, {
             layoutSwitch: {

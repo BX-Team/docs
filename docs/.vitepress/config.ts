@@ -1,12 +1,16 @@
 import { defineConfig, type DefaultTheme } from "vitepress";
 
 import { InlineLinkPreviewElementTransform } from "@nolebase/vitepress-plugin-inline-link-preview/markdown-it";
-import { groupIconMdPlugin } from "vitepress-plugin-group-icons";
+import {
+    groupIconMdPlugin,
+    groupIconVitePlugin,
+} from "vitepress-plugin-group-icons";
 import {
     GitChangelog,
     GitChangelogMarkdownSection,
 } from "@nolebase/vitepress-plugin-git-changelog";
 import { createSidebar } from "./sidebar-config";
+import { CodeTabsServerPlugin } from "./codetabs/CodeTabsServerPlugin";
 
 export default defineConfig({
     vite: {
@@ -15,6 +19,14 @@ export default defineConfig({
                 repoURL: () => "https://github.com/BX-Team/docs",
             }),
             GitChangelogMarkdownSection(),
+            groupIconVitePlugin({
+                customIcon: {
+                    maven: "vscode-icons:file-type-maven",
+                    groovy: "logos:gradle",
+                    kotlin: "logos:kotlin-icon",
+                },
+            }),
+            CodeTabsServerPlugin(),
         ],
 
         optimizeDeps: {

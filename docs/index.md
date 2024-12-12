@@ -24,7 +24,7 @@ features:
     - icon: 💵
       title: NDailyRewards
       details: NDailyRewards gives you ability to give daily rewards for your players for playing on your server.
-      link: /documentation/ndailyrewards/
+      link: /documentation/ndailyrewards/about
     - icon: ☁️
       title: RealWorldSync
       details: Synchronizes time and weather from the real world to the game.

@@ -29,6 +29,8 @@ const vitepressSidebarOptions: VitePressSidebarOptions[] = [
     ]),
 
     createSidebarOptions("/documentation/ndailyrewards/", [
+        "about.md",
+
         "configuration",
         "files.md",
         "placeholders.md",
@@ -37,6 +39,7 @@ const vitepressSidebarOptions: VitePressSidebarOptions[] = [
         "commands.md",
 
         "development",
+        "dependencies.md",
         "events.md",
     ]),
 

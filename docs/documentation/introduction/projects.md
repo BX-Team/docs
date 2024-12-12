@@ -10,7 +10,7 @@ Click on the button below to get started.<br>
 You can also use the menu on the top to switch between the documentation pages of the different projects.
 
 <a href="/documentation/divinemc/about" class="docs-button">DivineMC</a>
-<a href="/documentation/ndailyrewards" class="docs-button">NDailyRewards</a>
+<a href="/documentation/ndailyrewards/about" class="docs-button">NDailyRewards</a>
 <a href="/documentation/realworldsync" class="docs-button">RealWorldSync</a>
 <a class="off-button">Nexus</a>
 

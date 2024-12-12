@@ -7,7 +7,7 @@ outline: deep
 This page contains information about the supported versions of DivineMC. You can find all the information about the versions in the table below.
 
 |      Name       |      Fork Of      |                                      Download                                      |
-|:---------------:|:-----------------:|:----------------------------------------------------------------------------------:|
+| :-------------: | :---------------: | :--------------------------------------------------------------------------------: |
 | DivineMC 1.21.4 |   Purpur 1.21.4   | [Download latest](https://github.com/DivineMC/DivineMC/releases/tag/latest-1.21.4) |
 | DivineMC 1.21.3 |   Purpur 1.21.3   | [Download latest](https://github.com/DivineMC/DivineMC/releases/tag/latest-1.21.3) |
 | DivineMC 1.21.1 |   Purpur 1.21.1   | [Download latest](https://github.com/DivineMC/DivineMC/releases/tag/latest-1.21.1) |
