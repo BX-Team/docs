@@ -85,8 +85,8 @@ function postProcessSidebar(sidebar: Sidebar): Sidebar {
                 text: "Projects",
                 link: "/introduction/projects",
                 items: [
-                    { text: "DivineMC", link: "/divinemc" },
-                    { text: "NDailyRewards", link: "/ndailyrewards" },
+                    { text: "DivineMC", link: "/divinemc/about" },
+                    { text: "NDailyRewards", link: "/ndailyrewards/about" },
                     { text: "RealWorldSync", link: "/realworldsync" },
                 ],
             },
