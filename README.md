@@ -9,8 +9,8 @@ How to get docs running on your local machine for development.
 
 ### Prerequisites
 
-- [node](https://nodejs.org)
-- [npm](https://www.npmjs.com/)
+-   [node](https://nodejs.org)
+-   [npm](https://www.npmjs.com/)
 
 ### Local Development
 
@@ -29,7 +29,7 @@ $ npm install
 3. Start the development server.
 
 ```bash
-$ npm run docs:dev
+$ npm run dev
 ```
 
 This will start a local development server and open a browser window. The majority of changes will
@@ -39,5 +39,5 @@ your browser. Edit away!
 ### Building
 
 ```bash
-$ npm run docs:build
+$ npm run build
 ```
