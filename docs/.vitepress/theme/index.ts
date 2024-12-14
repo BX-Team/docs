@@ -4,10 +4,10 @@ import type { Theme } from "vitepress";
 
 import type { Options } from "@nolebase/vitepress-plugin-enhanced-readabilities/client";
 import {
-    InjectionKey as InjectEnhancedReadabilities,
-    LayoutMode,
-    NolebaseEnhancedReadabilitiesMenu,
-    NolebaseEnhancedReadabilitiesScreenMenu,
+  InjectionKey as InjectEnhancedReadabilities,
+  LayoutMode,
+  NolebaseEnhancedReadabilitiesMenu,
+  NolebaseEnhancedReadabilitiesScreenMenu,
 } from "@nolebase/vitepress-plugin-enhanced-readabilities/client";
 import "@nolebase/vitepress-plugin-enhanced-readabilities/client/style.css";
 
@@ -15,8 +15,8 @@ import { NolebaseInlineLinkPreviewPlugin } from "@nolebase/vitepress-plugin-inli
 import "@nolebase/vitepress-plugin-inline-link-preview/client/style.css";
 
 import {
-    InjectionKey as InjectGitChangelog,
-    NolebaseGitChangelogPlugin,
+  InjectionKey as InjectGitChangelog,
+  NolebaseGitChangelogPlugin,
 } from "@nolebase/vitepress-plugin-git-changelog/client";
 import "@nolebase/vitepress-plugin-git-changelog/client/style.css";
 
@@ -34,34 +34,34 @@ import "./patches/codetab-patch.css";
 import "./patches/sidebar-patch.css";
 
 export default {
-    extends: DefaultTheme,
-    Layout: () => {
-        return h(DefaultTheme.Layout, null, {
-            "aside-bottom": () => h(SocialBlock),
-            "nav-bar-content-after": () => h(NolebaseEnhancedReadabilitiesMenu),
-            "nav-screen-content-after": () =>
-                h(NolebaseEnhancedReadabilitiesScreenMenu),
-        });
-    },
-    enhanceApp({ app }) {
-        app.use(NolebaseInlineLinkPreviewPlugin);
-        app.use(NolebaseGitChangelogPlugin);
-        app.use(CodeTabsClientPlugin());
+  extends: DefaultTheme,
+  Layout: () => {
+    return h(DefaultTheme.Layout, null, {
+      "aside-bottom": () => h(SocialBlock),
+      "nav-bar-content-after": () => h(NolebaseEnhancedReadabilitiesMenu),
+      "nav-screen-content-after": () =>
+        h(NolebaseEnhancedReadabilitiesScreenMenu),
+    });
+  },
+  enhanceApp({ app }) {
+    app.use(NolebaseInlineLinkPreviewPlugin);
+    app.use(NolebaseGitChangelogPlugin);
+    app.use(CodeTabsClientPlugin());
 
-        app.provide(InjectEnhancedReadabilities, {
-            layoutSwitch: {
-                defaultMode: LayoutMode.BothWidthAdjustable,
-                pageLayoutMaxWidth: {
-                    defaultMaxWidth: 90,
-                },
-                contentLayoutMaxWidth: {
-                    defaultMaxWidth: 95,
-                },
-            },
-        } as Options);
-        app.provide(InjectGitChangelog, {
-            hideContributorsHeader: true,
-            hideChangelogHeader: true,
-        });
-    },
+    app.provide(InjectEnhancedReadabilities, {
+      layoutSwitch: {
+        defaultMode: LayoutMode.BothWidthAdjustable,
+        pageLayoutMaxWidth: {
+          defaultMaxWidth: 90,
+        },
+        contentLayoutMaxWidth: {
+          defaultMaxWidth: 95,
+        },
+      },
+    } as Options);
+    app.provide(InjectGitChangelog, {
+      hideContributorsHeader: true,
+      hideChangelogHeader: true,
+    });
+  },
 } satisfies Theme;

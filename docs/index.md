@@ -2,33 +2,37 @@
 layout: home
 
 hero:
-    name: "BX Team"
-    text: "Documentation"
-    tagline: "Documentation for all BX Team projects."
-    image:
-        src: /assets/logo.png
-        alt: BX Team
-    actions:
-        - theme: brand
-          text: Get Started
-          link: /documentation/introduction/projects
-        - theme: alt
-          text: Visit our GitHub
-          link: https://github.com/BX-Team
+  name: "BX Team"
+  text: "Documentation"
+  tagline: "Documentation for all BX Team projects."
+  image:
+    src: /assets/logo.png
+    alt: BX Team
+  actions:
+    - theme: brand
+      text: Get Started
+      link: /documentation/introduction/projects
+    - theme: alt
+      text: Visit our GitHub
+      link: https://github.com/BX-Team
 
 features:
-    - icon: 🪨
-      title: DivineMC
-      details: DivineMC is the fork of Purpur compatible with Spigot plugins, offering the best performance for your server.
-      link: /documentation/divinemc/about
-    - icon: 💵
-      title: NDailyRewards
-      details: NDailyRewards gives you ability to give daily rewards for your players for playing on your server.
-      link: /documentation/ndailyrewards/about
-    - icon: ☁️
-      title: RealWorldSync
-      details: Synchronizes time and weather from the real world to the game.
-      link: /documentation/realworldsync/
+  - icon: 📚
+    title: Nexus
+    details: Nexus is a plugin that gives you ability to personalize your Minecraft server with useful features.
+    link: /documentation/nexus/about
+  - icon: 🪨
+    title: DivineMC
+    details: DivineMC is the fork of Purpur compatible with Spigot plugins, offering the best performance for your server.
+    link: /documentation/divinemc/about
+  - icon: 💵
+    title: NDailyRewards
+    details: NDailyRewards gives you ability to give daily rewards for your players for playing on your server.
+    link: /documentation/ndailyrewards/about
+  - icon: ☁️
+    title: RealWorldSync
+    details: Synchronizes time and weather from the real world to the game.
+    link: /documentation/realworldsync/
 ---
 
 <script setup>

@@ -30,14 +30,14 @@ To get started with PRing changes, you'll need the following software, most of
 which can be obtained in (most) package managers such as `apt` (Debian / Ubuntu;
 you will most likely use this for WSL), `homebrew` (macOS / Linux), and more:
 
--   `git` (package `git` everywhere);
--   A Java 17 or later JDK (packages vary, use Google/DuckDuckGo/etc.).
-    -   [Adoptium](https://adoptium.net/) has builds for most operating systems.
-    -   DivineMC requires JDK 17 to build, however makes use of Gradle's
-        [Toolchains](https://docs.gradle.org/current/userguide/toolchains.html)
-        feature to allow building with only JRE 8 or later installed. (Gradle will
-        automatically provision JDK 17 for compilation if it cannot find an existing
-        install).
+- `git` (package `git` everywhere);
+- A Java 17 or later JDK (packages vary, use Google/DuckDuckGo/etc.).
+  - [Adoptium](https://adoptium.net/) has builds for most operating systems.
+  - DivineMC requires JDK 17 to build, however makes use of Gradle's
+    [Toolchains](https://docs.gradle.org/current/userguide/toolchains.html)
+    feature to allow building with only JRE 8 or later installed. (Gradle will
+    automatically provision JDK 17 for compilation if it cannot find an existing
+    install).
 
 If you're on Windows, check
 [the section on WSL](#patching-and-building-is-really-slow-what-can-i-do).
@@ -59,8 +59,8 @@ DivineMC is mostly patches and extensions to Paper/Spigot. These patches/extensi
 split into different directories which target certain parts of the code. These
 directories are:
 
--   `DivineMC-API` - Modifications to `Paper-API` and `Purpur-API`;
--   `DivineMC-Server` - Modifications to `Paper-Server` and `Purpur-Server`.
+- `DivineMC-API` - Modifications to `Paper-API` and `Purpur-API`;
+- `DivineMC-Server` - Modifications to `Paper-Server` and `Purpur-Server`.
 
 Because the entire structure is based on patches and git, a basic understanding
 of how to use git is required. A basic tutorial can be found here:
@@ -75,8 +75,8 @@ Assuming you have already forked the repository:
 
 `DivineMC-Server` and `DivineMC-API` aren't git repositories in the traditional sense:
 
--   `base` points to the unmodified source before DivineMC patches have been applied.
--   Each commit after `base` is a patch.
+- `base` points to the unmodified source before DivineMC patches have been applied.
+- Each commit after `base` is a patch.
 
 ## Adding Patches
 
@@ -111,26 +111,26 @@ edit it using `git rebase`.
 
 1. If you have changes you are working on, type `git stash` to store them for
    later;
-    - You can type `git stash pop` to get them back at any point.
+   - You can type `git stash pop` to get them back at any point.
 1. Type `git rebase -i base`;
-    - It should show something like
-      [this](https://gist.github.com/zachbr/21e92993cb99f62ffd7905d7b02f3159) in
-      the text editor you get.
-    - If your editor does not have a "menu" at the bottom, you're using `vim`.  
-      If you don't know how to use `vim` and don't want to
-      learn, enter `:q!` and press enter. Before redoing this step, do
-      `export EDITOR=nano` for an easier editor to use.
+   - It should show something like
+     [this](https://gist.github.com/zachbr/21e92993cb99f62ffd7905d7b02f3159) in
+     the text editor you get.
+   - If your editor does not have a "menu" at the bottom, you're using `vim`.  
+     If you don't know how to use `vim` and don't want to
+     learn, enter `:q!` and press enter. Before redoing this step, do
+     `export EDITOR=nano` for an easier editor to use.
 1. Replace `pick` with `edit` for the commit/patch you want to modify, and
    "save" the changes;
-    - Only do this for **one** commit at a time.
+   - Only do this for **one** commit at a time.
 1. Make the changes you want to make to the patch;
 1. Type `git add .` to add your changes;
 1. Type `git commit --amend` to commit;
-    - **Make sure to add `--amend`** or else a new patch will be created.
-    - You can also modify the commit message and author here.
+   - **Make sure to add `--amend`** or else a new patch will be created.
+   - You can also modify the commit message and author here.
 1. Type `git rebase --continue` to finish rebasing;
 1. Type `./gradlew rebuildPatches` in the root directory;
-    - This will modify the appropriate patches based on your commits.
+   - This will modify the appropriate patches based on your commits.
 1. PR your modified patch file(s) back to this repository.
 
 ### Method 2 - Fixup commits
@@ -149,29 +149,29 @@ messing with your HEADs.
 1. Type `git rebase -i base`, move (cut) your temporary commit and
    move it under the line of the patch you wish to modify;
 1. Change the `pick` to the appropriate action:
-    1. `f`/`fixup`: Merge your changes into the patch without touching the
-       message.
-    1. `s`/`squash`: Merge your changes into the patch and use your commit message
-       and subject.
+   1. `f`/`fixup`: Merge your changes into the patch without touching the
+      message.
+   1. `s`/`squash`: Merge your changes into the patch and use your commit message
+      and subject.
 1. Type `./gradlew rebuildPatches` in the root directory;
-    - This will modify the appropriate patches based on your commits.
+   - This will modify the appropriate patches based on your commits.
 1. PR your modified patch file(s) back to this repository.
 
 #### Automatic method
 
 1. Make your change while at HEAD;
 1. Make a fixup commit. `git commit -a --fixup <hashOfPatchToFix>`;
-    - You can also use `--squash` instead of `--fixup` if you want the commit
-      message to also be changed.
-    - You can get the hash by looking at `git log` or `git blame`; your IDE can
-      assist you too.
-    - Alternatively, if you only know the name of the patch, you can do
-      `git commit -a --fixup "Subject of Patch name"`.
+   - You can also use `--squash` instead of `--fixup` if you want the commit
+     message to also be changed.
+   - You can get the hash by looking at `git log` or `git blame`; your IDE can
+     assist you too.
+   - Alternatively, if you only know the name of the patch, you can do
+     `git commit -a --fixup "Subject of Patch name"`.
 1. Rebase with autosquash: `git rebase --autosquash -i base`.
    This will automatically move your fixup commit to the right place, and you just
    need to "save" the changes.
 1. Type `./gradlew rebuildPatches` in the root directory;
-    - This will modify the appropriate patches based on your commits.
+   - This will modify the appropriate patches based on your commits.
 1. PR your modified patch file(s) back to this repository.
 
 ## Rebasing PRs
@@ -184,8 +184,8 @@ These steps assume the `origin` remote is your fork of this repository and `upst
 1. Apply updated patches: `./gradlew applyPatches`.
 1. If there are conflicts, fix them.
 1. If your PR creates new patches instead of modifying exist ones, in both the `DivineMC-Server` and `DivineMC-API` directories, ensure your newly-created patch is the last commit by either:
-    - Renaming the patch file with a large 4-digit number in front (e.g. 9999-Patch-to-add-some-new-stuff.patch), and re-applying patches.
-    - Running `git rebase --interactive base` and moving the commits to the end.
+   - Renaming the patch file with a large 4-digit number in front (e.g. 9999-Patch-to-add-some-new-stuff.patch), and re-applying patches.
+   - Running `git rebase --interactive base` and moving the commits to the end.
 1. Rebuild patches: `./gradlew rebuildPatches`.
 1. Commit modified patches.
 1. Force push changes: `git push --force`.
@@ -205,12 +205,12 @@ when making and submitting changes.
 
 All modifications to non-DivineMC files should be marked.
 
--   Multi-line changes start with `// DivineMC start` and end with `// DivineMC end`;
--   You can put a comment with an explanation if it isn't obvious, like this:
-    `// DivineMC start - reason`. - The comments should generally be about the reason the change was made, what
-    it was before, or what the change is. - Multi-line messages should start with `// DivineMC start` and use `/* Multi
+- Multi-line changes start with `// DivineMC start` and end with `// DivineMC end`;
+- You can put a comment with an explanation if it isn't obvious, like this:
+  `// DivineMC start - reason`. - The comments should generally be about the reason the change was made, what
+  it was before, or what the change is. - Multi-line messages should start with `// DivineMC start` and use `/* Multi
 line message here */` for the message itself.
--   One-line changes should have `// DivineMC` or `// DivineMC - reason`.
+- One-line changes should have `// DivineMC` or `// DivineMC - reason`.
 
 Here's an example of how to mark changes by DivineMC:
 
@@ -229,10 +229,10 @@ entity.getWorld().explode(new BlockPosition(spawnLocation.getX(), spawnLocation.
 We generally follow usual Java style (aka. Oracle style), or what is programmed
 into most IDEs and formatters by default. There are a few notes, however:
 
--   It is fine to go over 80 lines as long as it doesn't hurt readability.  
-    There are exceptions, especially in Spigot-related files
--   When in doubt or the code around your change is in a clearly different style,
-    use the same style as the surrounding code.
+- It is fine to go over 80 lines as long as it doesn't hurt readability.  
+  There are exceptions, especially in Spigot-related files
+- When in doubt or the code around your change is in a clearly different style,
+  use the same style as the surrounding code.
 
 ## Patch Notes
 
@@ -365,21 +365,21 @@ return this.level.divinemcConfig.useInhabitedTime ? this.inhabitedTime : 0;
 
 To build and install the DivineMC APIs and Server to your local Maven repository, do the following:
 
--   Run `./gradlew publishToMavenLocal` in the base directory.
+- Run `./gradlew publishToMavenLocal` in the base directory.
 
 If you use Gradle to build your plugin:
 
--   Add `mavenLocal()` as a repository. Gradle checks repositories in the order they are declared,
-    so if you also have the DivineMC repository added, put the local repository above DivineMC's.
--   Make sure to remove `mavenLocal()` when you are done testing, see the [Gradle docs](https://docs.gradle.org/current/userguide/declaring_repositories.html#sec:case-for-maven-local)
-    for more details.
+- Add `mavenLocal()` as a repository. Gradle checks repositories in the order they are declared,
+  so if you also have the DivineMC repository added, put the local repository above DivineMC's.
+- Make sure to remove `mavenLocal()` when you are done testing, see the [Gradle docs](https://docs.gradle.org/current/userguide/declaring_repositories.html#sec:case-for-maven-local)
+  for more details.
 
 If you use Maven to build your plugin:
 
--   If you later need to use the DivineMC-API, you might want to remove the jar
-    from your local Maven repository.  
-    If you use Windows and don't usually build using WSL, you might not need to
-    do this.
+- If you later need to use the DivineMC-API, you might want to remove the jar
+  from your local Maven repository.  
+  If you use Windows and don't usually build using WSL, you might not need to
+  do this.
 
 ## Frequently Asked Questions
 
@@ -393,9 +393,9 @@ patching process.
 1. Save (rebuild) any patches you are in the middle of working on! Their
    progress will be lost if you do not;
 1. Identify the name(s) of the file(s) you want to import.
-    - A complete list of all possible file names can be found at
-      `./DivineMC-Server/.gradle/caches/paperweight/mc-dev-sources/net/minecraft/`. You might find
-      [MiniMappingViewer] useful if you need to translate between Mojang and Spigot mapped names.
+   - A complete list of all possible file names can be found at
+     `./DivineMC-Server/.gradle/caches/paperweight/mc-dev-sources/net/minecraft/`. You might find
+     [MiniMappingViewer] useful if you need to translate between Mojang and Spigot mapped names.
 1. Open the file at `./build-data/dev-imports.txt` and add the name of your file to
    the script. Follow the instructions there;
 1. Re-patch the server `./gradlew applyPatches`;

@@ -10,8 +10,8 @@ This page contains the configuration structure for RealWorldSync.
 
 📁 `plugins/RealWorldSync/`
 
--   📄 `config.yml`: General plugin configuration
--   📄 `lang.yml`: Configurable plugin messages
+- 📄 `config.yml`: General plugin configuration
+- 📄 `lang.yml`: Configurable plugin messages
 
 ## Example files
 
@@ -32,19 +32,19 @@ This page contains the configuration structure for RealWorldSync.
 # Modrinth: https://modrinth.com/plugin/rws
 
 options:
-    check-for-updates: true
-    enable-metrics: true
+  check-for-updates: true
+  enable-metrics: true
 time:
-    enabled: false
-    update-interval: 20
-    timezone: "Europe/Berlin"
+  enabled: false
+  update-interval: 20
+  timezone: "Europe/Berlin"
 weather:
-    enabled: false
-    update-interval: 6000
-    openweathermap-key: ""
-    location:
-        latitude: "0"
-        longitude: "0"
+  enabled: false
+  update-interval: 6000
+  openweathermap-key: ""
+  location:
+    latitude: "0"
+    longitude: "0"
 ```
 
 </details>
@@ -54,10 +54,10 @@ weather:
 
 ```yaml
 Help:
-    <gray>-----------<gray> [<green>RealWorldSync<gray>] -----------<newline><dark_green>»
-    <green>/rws time <gray>- Shows time by timezone in config.<newline><dark_green>»
-    <green>/rws reload <gray>- Reload the plugin.<newline><dark_green>» <green>/rws
-    version <gray>- Shows the version currently installed
+  <gray>-----------<gray> [<green>RealWorldSync<gray>] -----------<newline><dark_green>»
+  <green>/rws time <gray>- Shows time by timezone in config.<newline><dark_green>»
+  <green>/rws reload <gray>- Reload the plugin.<newline><dark_green>» <green>/rws
+  version <gray>- Shows the version currently installed
 Prefix: <gray>[<green>RealWorldSync<gray>] <gray>
 NoPermission: <red>You don't have permissions to do that.
 Version: "<green>Current installed plugin version: <version>"
