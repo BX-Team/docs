@@ -14,16 +14,16 @@ NDailyRewards is a simple and lightweight plugin that allows you to reward your 
 
 ## Features
 
--   📇 MariaDB and SQLite support
--   ⚙️ High adjustable and simple configuration
--   🌈 HEX Colors with gradient support
--   ⌨️ Various action types for rewards
--   📄 PlaceholderAPI Support
--   📝 Customizable and Translatable Messages
--   😎 Custom model data support
--   🔁 Auto claim rewards
--   🔔 Join notifications and auto-GUI opening
--   ...and more!
+- 📇 MariaDB and SQLite support
+- ⚙️ High adjustable and simple configuration
+- 🌈 HEX Colors with gradient support
+- ⌨️ Various action types for rewards
+- 📄 PlaceholderAPI Support
+- 📝 Customizable and Translatable Messages
+- 😎 Custom model data support
+- 🔁 Auto claim rewards
+- 🔔 Join notifications and auto-GUI opening
+- ...and more!
 
 ## Documentation sections
 

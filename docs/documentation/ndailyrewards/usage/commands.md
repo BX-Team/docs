@@ -17,4 +17,4 @@ NDailyRewards provides a range of commands for you to use. This page will detail
 | `/reward setday <player> <day>` | Assign a specific day to the player | `ndailyrewards.setday`  |        ❌        |
 | `/reward version`               | Sends current version of plugin     | `ndailyrewards.version` |        ❌        |
 
--   &dagger; **Default** &mdash; ✅ = Accessible by all players by default &mdash; ❌ = Accessible only by server operators by default.
+- &dagger; **Default** &mdash; ✅ = Accessible by all players by default &mdash; ❌ = Accessible only by server operators by default.

@@ -8,17 +8,17 @@ This page details the various configuration settings exposed by Bukkit, Spigot a
 
 If you want information on settings in **paper.yml**, **spigot.yml**, **bukkit.yml** and **server.properties** you should see their respective documentation pages.
 
--   [Server Configuration (server.properties)](https://minecraft.wiki/w/Server.properties)
+- [Server Configuration (server.properties)](https://minecraft.wiki/w/Server.properties)
 
--   [Bukkit Configuration (bukkit.yml)](https://bukkit.fandom.com/wiki/Bukkit.yml)
+- [Bukkit Configuration (bukkit.yml)](https://bukkit.fandom.com/wiki/Bukkit.yml)
 
--   [Spigot Configuration (spigot.yml)](https://www.spigotmc.org/wiki/spigot-configuration)
+- [Spigot Configuration (spigot.yml)](https://www.spigotmc.org/wiki/spigot-configuration)
 
--   [Paper Configuration (paper.yml)](https://docs.papermc.io/paper/reference/paper-global-configuration)
+- [Paper Configuration (paper.yml)](https://docs.papermc.io/paper/reference/paper-global-configuration)
 
--   [Pufferfish Configuration (pufferfish.yml)](https://docs.pufferfish.host/setup/pufferfish-fork-configuration)
+- [Pufferfish Configuration (pufferfish.yml)](https://docs.pufferfish.host/setup/pufferfish-fork-configuration)
 
--   [Purpur Configuration (purpur.yml)](https://purpurmc.org/docs/Configuration)
+- [Purpur Configuration (purpur.yml)](https://purpurmc.org/docs/Configuration)
 
 ::: warning
 

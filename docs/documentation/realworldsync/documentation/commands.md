@@ -15,7 +15,7 @@ RealWorldSync provides a range of commands for you to use.
 | `/rws version` | Sends current version of plugin                                  | `rws.user`      |        ✅        |
 | `/rws reload`  | Reloads plugin configuration and re-setting-up time/weather sync | `rws.admin`     |        ❌        |
 
--   &dagger; **Default** &mdash; ✅ = Accessible by all players by default &mdash; ❌ = Accessible only by server operators by default.
+- &dagger; **Default** &mdash; ✅ = Accessible by all players by default &mdash; ❌ = Accessible only by server operators by default.
 
 ### Command Aliases
 

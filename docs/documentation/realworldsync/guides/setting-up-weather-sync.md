@@ -10,23 +10,23 @@ By default, all of RealWorldSync features will be disabled. You can see default 
 
 ### Time Sync Settings
 
--   `time.enabled` (Default: `false`)  
-    If set to true, then time synchronization will work. **Make sure that you set the options below after enabling this.**
--   `time.update-interval` (Default: `20`)  
-    This configuration option allows you to change how often RealWorldSync updates your server's time.
--   `time.timezone` (Default: `Europe/Berlin`)  
-    Enter the time zone that you'd like to sync with here. You can find a list of timezone names [here](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List).
+- `time.enabled` (Default: `false`)  
+  If set to true, then time synchronization will work. **Make sure that you set the options below after enabling this.**
+- `time.update-interval` (Default: `20`)  
+  This configuration option allows you to change how often RealWorldSync updates your server's time.
+- `time.timezone` (Default: `Europe/Berlin`)  
+  Enter the time zone that you'd like to sync with here. You can find a list of timezone names [here](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List).
 
 ### Weather Sync Settings
 
--   `weather.enabled` (Default: `false`)  
-    If set to true, then weather synchronization will work. **Make sure that you set the options below after enabling this.**
--   `weather.update-interval` (Default: `6000`)  
-    This configuration option changes how often RealWorldSync will get weather information from OpenWeather and update your server's weather. **We don't recommend to set this value below then 2400.**
--   `weather.openweathermap-key` (Default: `<nothing>`)  
-    Put your OpenWeather API key here. Tutorial on how to get OpenWeatherMap key below. **Keep this key in secret!**
--   `weather.location.latitude` and `weather.location.longitude` (Default values: `0` and `0`)  
-    Put the latitude and longitude of the location that you want to sync your server's weather with here. You can find the latitude and longitude of a location [here](https://www.latlong.net).
+- `weather.enabled` (Default: `false`)  
+  If set to true, then weather synchronization will work. **Make sure that you set the options below after enabling this.**
+- `weather.update-interval` (Default: `6000`)  
+  This configuration option changes how often RealWorldSync will get weather information from OpenWeather and update your server's weather. **We don't recommend to set this value below then 2400.**
+- `weather.openweathermap-key` (Default: `<nothing>`)  
+  Put your OpenWeather API key here. Tutorial on how to get OpenWeatherMap key below. **Keep this key in secret!**
+- `weather.location.latitude` and `weather.location.longitude` (Default values: `0` and `0`)  
+  Put the latitude and longitude of the location that you want to sync your server's weather with here. You can find the latitude and longitude of a location [here](https://www.latlong.net).
 
 # Getting an OpenWeather API key
 

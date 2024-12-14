@@ -27,181 +27,181 @@ check-updates: true
 
 # Database configuration
 database:
-    # Select here the database you want to use
-    # The following databases are supported:
-    #  - sqlite - (default) stores all data in a local file
-    #  - mariadb - allows using a remote database
-    type: sqlite
+  # Select here the database you want to use
+  # The following databases are supported:
+  #  - sqlite - (default) stores all data in a local file
+  #  - mariadb - allows using a remote database
+  type: sqlite
 
-    # SQLite configuration
-    sqlite:
-        file: "ndailyrewards.db"
-    # MariaDB configuration
-    mariadb:
-        jdbc: "jdbc:mariadb://localhost:3306/ndailyrewards"
-        username: "root"
-        password: "password"
+  # SQLite configuration
+  sqlite:
+    file: "ndailyrewards.db"
+  # MariaDB configuration
+  mariadb:
+    jdbc: "jdbc:mariadb://localhost:3306/ndailyrewards"
+    username: "root"
+    password: "password"
 
-    # Advanced configuration for Database (do not touch unless you know what you are doing)
-    # Comment out any data source property to disable setting it.
-    cachePrepStmts: true
-    prepStmtCacheSize: 250
-    prepStmtCacheSqlLimit: 2048
-    useServerPrepStmts: true
-    useLocalSessionState: true
-    rewriteBatchedStatements: true
-    cacheResultSetMetadata: true
-    cacheServerConfiguration: true
-    elideSetAutoCommits: true
-    maintainTimeStats: false
+  # Advanced configuration for Database (do not touch unless you know what you are doing)
+  # Comment out any data source property to disable setting it.
+  cachePrepStmts: true
+  prepStmtCacheSize: 250
+  prepStmtCacheSqlLimit: 2048
+  useServerPrepStmts: true
+  useLocalSessionState: true
+  rewriteBatchedStatements: true
+  cacheResultSetMetadata: true
+  cacheServerConfiguration: true
+  elideSetAutoCommits: true
+  maintainTimeStats: false
 
 # Player events
 events:
-    # Whether a reward should automatically claim when a player joins (if available)
-    auto-claim-reward: false
-    # Delay in seconds before the reward is automatically claimed
-    auto-claim-delay: 10
-    # When player joins the server, should plugin open the reward GUI?
-    open-gui-when-available: false
-    # When player joins the server, should plugin notify player about available rewards?
-    notify-when-available: true
+  # Whether a reward should automatically claim when a player joins (if available)
+  auto-claim-reward: false
+  # Delay in seconds before the reward is automatically claimed
+  auto-claim-delay: 10
+  # When player joins the server, should plugin open the reward GUI?
+  open-gui-when-available: false
+  # When player joins the server, should plugin notify player about available rewards?
+  notify-when-available: true
 
 # Rewards configuration
 rewards:
-    # When a player reaches the day limit, should it reset to the first day?
-    reset-when-all-claimed: true
-    # When player joins server for the first time, should the reward be available?
-    first-join-reward: false
-    # Specify how many days the player has to wait to claim the reward again (in hours)
-    cooldown: 24
-    # Should next day unlock after midnight?
-    unlock-after-midnight: false
-    # Available actions:
-    # [console] - entered statement will be executed from console
-    # [player] - statement performed as player command execution
-    # [message] - messages the player with specified text
-    # [actionbar] - shows the text in actionbar for the player
-    # [title] - sends primary title with entered text
-    # [subtitle] - sends secondary title with entered text
-    # [sound] - plays specified sound for the player (sound:volume:pitch)
-    # [permission] {ndailyrewards.permission} - checks if player has permission
-    # [luck] {0-100} - executes the statement with a specified chance (0-100)
-    # [close] - closes the inventory for the player
-    # You can also use PlaceholderAPI placeholders (requires PlaceholderAPI plugin)
-    # Note: First slot in inventory is 0, not 1
-    days:
-        "1":
-            position: 10
-            lore:
-                - "&7&lRewards:"
-                - "&6- &e1x &6Diamond"
-            actions:
-                - "[console] give <player> diamond 1"
-                - "[message] &6You have claimed your reward!"
-                - "[sound] ENTITY_EXPERIENCE_ORB_PICKUP:1:1"
-        "2":
-            position: 11
-            lore:
-                - "&7&lRewards:"
-                - "&6- &e2x &6Diamond"
-            actions:
-                - "[console] give <player> diamond 2"
-                - "[message] &6You have claimed your reward!"
-                - "[sound] ENTITY_EXPERIENCE_ORB_PICKUP:1:1"
-        "3":
-            position: 12
-            lore:
-                - "&7&lRewards:"
-                - "&6- &e3x &6Diamond"
-            actions:
-                - "[console] give <player> diamond 3"
-                - "[message] &6You have claimed your reward!"
-                - "[sound] ENTITY_EXPERIENCE_ORB_PICKUP:1:1"
-        "4":
-            position: 13
-            lore:
-                - "&7&lRewards:"
-                - "&6- &e4x &6Diamond"
-            actions:
-                - "[console] give <player> diamond 4"
-                - "[message] &6You have claimed your reward!"
-                - "[sound] ENTITY_EXPERIENCE_ORB_PICKUP:1:1"
-        "5":
-            position: 14
-            lore:
-                - "&7&lRewards:"
-                - "&6- &e5x &6Diamond"
-            actions:
-                - "[console] give <player> diamond 5"
-                - "[message] &6You have claimed your reward!"
-                - "[sound] ENTITY_EXPERIENCE_ORB_PICKUP:1:1"
-        "6":
-            position: 15
-            lore:
-                - "&7&lRewards:"
-                - "&6- &e6x &6Diamond"
-            actions:
-                - "[console] give <player> diamond 6"
-                - "[message] &6You have claimed your reward!"
-                - "[sound] ENTITY_EXPERIENCE_ORB_PICKUP:1:1"
-        "7":
-            position: 16
-            lore:
-                - "&7&lRewards:"
-                - "&6- &e7x &6Diamond"
-            actions:
-                - "[console] give <player> diamond 7"
-                - "[message] &6You have claimed your reward!"
-                - "[sound] ENTITY_EXPERIENCE_ORB_PICKUP:1:1"
+  # When a player reaches the day limit, should it reset to the first day?
+  reset-when-all-claimed: true
+  # When player joins server for the first time, should the reward be available?
+  first-join-reward: false
+  # Specify how many days the player has to wait to claim the reward again (in hours)
+  cooldown: 24
+  # Should next day unlock after midnight?
+  unlock-after-midnight: false
+  # Available actions:
+  # [console] - entered statement will be executed from console
+  # [player] - statement performed as player command execution
+  # [message] - messages the player with specified text
+  # [actionbar] - shows the text in actionbar for the player
+  # [title] - sends primary title with entered text
+  # [subtitle] - sends secondary title with entered text
+  # [sound] - plays specified sound for the player (sound:volume:pitch)
+  # [permission] {ndailyrewards.permission} - checks if player has permission
+  # [luck] {0-100} - executes the statement with a specified chance (0-100)
+  # [close] - closes the inventory for the player
+  # You can also use PlaceholderAPI placeholders (requires PlaceholderAPI plugin)
+  # Note: First slot in inventory is 0, not 1
+  days:
+    "1":
+      position: 10
+      lore:
+        - "&7&lRewards:"
+        - "&6- &e1x &6Diamond"
+      actions:
+        - "[console] give <player> diamond 1"
+        - "[message] &6You have claimed your reward!"
+        - "[sound] ENTITY_EXPERIENCE_ORB_PICKUP:1:1"
+    "2":
+      position: 11
+      lore:
+        - "&7&lRewards:"
+        - "&6- &e2x &6Diamond"
+      actions:
+        - "[console] give <player> diamond 2"
+        - "[message] &6You have claimed your reward!"
+        - "[sound] ENTITY_EXPERIENCE_ORB_PICKUP:1:1"
+    "3":
+      position: 12
+      lore:
+        - "&7&lRewards:"
+        - "&6- &e3x &6Diamond"
+      actions:
+        - "[console] give <player> diamond 3"
+        - "[message] &6You have claimed your reward!"
+        - "[sound] ENTITY_EXPERIENCE_ORB_PICKUP:1:1"
+    "4":
+      position: 13
+      lore:
+        - "&7&lRewards:"
+        - "&6- &e4x &6Diamond"
+      actions:
+        - "[console] give <player> diamond 4"
+        - "[message] &6You have claimed your reward!"
+        - "[sound] ENTITY_EXPERIENCE_ORB_PICKUP:1:1"
+    "5":
+      position: 14
+      lore:
+        - "&7&lRewards:"
+        - "&6- &e5x &6Diamond"
+      actions:
+        - "[console] give <player> diamond 5"
+        - "[message] &6You have claimed your reward!"
+        - "[sound] ENTITY_EXPERIENCE_ORB_PICKUP:1:1"
+    "6":
+      position: 15
+      lore:
+        - "&7&lRewards:"
+        - "&6- &e6x &6Diamond"
+      actions:
+        - "[console] give <player> diamond 6"
+        - "[message] &6You have claimed your reward!"
+        - "[sound] ENTITY_EXPERIENCE_ORB_PICKUP:1:1"
+    "7":
+      position: 16
+      lore:
+        - "&7&lRewards:"
+        - "&6- &e7x &6Diamond"
+      actions:
+        - "[console] give <player> diamond 7"
+        - "[message] &6You have claimed your reward!"
+        - "[sound] ENTITY_EXPERIENCE_ORB_PICKUP:1:1"
 
 gui:
-    reward:
-        title: "&6Daily Rewards"
-        size: 27
-        display:
-            available:
-                material: "EMERALD_BLOCK:1"
-                name: "&aDay <dayNum>"
-                lore:
-                    - "&7Your Reward Awaits"
-                    - "&7Click Me to claim your prize!"
-                    - ""
-                    - "<reward-lore>"
-            claimed:
-                material: "COAL_BLOCK:1"
-                name: "&aDay <dayNum>"
-                lore:
-                    - "&7You have claimed this reward"
-                    - ""
-                    - "<reward-lore>"
-            next:
-                material: "COAL_BLOCK:1"
-                name: "&aDay <dayNum>"
-                lore:
-                    - "&7Your Reward Will Be Here Soon"
-                    - "&7Wait <time-left>"
-                    - ""
-                    - "<reward-lore>"
-            unavailable:
-                material: "BARRIER:1"
-                name: "&aDay <dayNum>"
-                lore:
-                    - "&7You have not reached this day yet"
-                    - ""
-                    - "<reward-lore>"
-            filler:
-                enable: true
-                material: "GRAY_STAINED_GLASS_PANE:1"
-                name: "&7"
-                lore: []
+  reward:
+    title: "&6Daily Rewards"
+    size: 27
+    display:
+      available:
+        material: "EMERALD_BLOCK:1"
+        name: "&aDay <dayNum>"
+        lore:
+          - "&7Your Reward Awaits"
+          - "&7Click Me to claim your prize!"
+          - ""
+          - "<reward-lore>"
+      claimed:
+        material: "COAL_BLOCK:1"
+        name: "&aDay <dayNum>"
+        lore:
+          - "&7You have claimed this reward"
+          - ""
+          - "<reward-lore>"
+      next:
+        material: "COAL_BLOCK:1"
+        name: "&aDay <dayNum>"
+        lore:
+          - "&7Your Reward Will Be Here Soon"
+          - "&7Wait <time-left>"
+          - ""
+          - "<reward-lore>"
+      unavailable:
+        material: "BARRIER:1"
+        name: "&aDay <dayNum>"
+        lore:
+          - "&7You have not reached this day yet"
+          - ""
+          - "<reward-lore>"
+      filler:
+        enable: true
+        material: "GRAY_STAINED_GLASS_PANE:1"
+        name: "&7"
+        lore: []
 
-        # Custom GUI items
-        custom: []
+    # Custom GUI items
+    custom: []
 
 sound:
-    open:
-        enabled: true
-        type: "BLOCK_BARREL_OPEN:1:1"
+  open:
+    enabled: true
+    type: "BLOCK_BARREL_OPEN:1:1"
 ```
 
 </details>
@@ -223,24 +223,24 @@ player-not-found: "&cPlayer not found!"
 invalid-syntax: "&cInvalid syntax! Use &f/reward help &cto see available commands"
 
 commands:
-    help:
-        - "&6List of available commands:"
-        - "&f/reward &7- Opens rewards menu"
-        - "&f/reward claim &7- Claim latest reward without opening the menu"
-        - "&f/reward help &7- Show this message"
-        - "&f/reward reload &7- Reloads plugin"
-        - "&f/reward setday <player> <day> &7- Set player's day"
-        - "&f/reward version &7- Show plugin version"
-    reload: "&aPlugin reloaded!"
-    setday: "&aSet &e<player> &acurrent day to &e<day>"
+  help:
+    - "&6List of available commands:"
+    - "&f/reward &7- Opens rewards menu"
+    - "&f/reward claim &7- Claim latest reward without opening the menu"
+    - "&f/reward help &7- Show this message"
+    - "&f/reward reload &7- Reloads plugin"
+    - "&f/reward setday <player> <day> &7- Set player's day"
+    - "&f/reward version &7- Show plugin version"
+  reload: "&aPlugin reloaded!"
+  setday: "&aSet &e<player> &acurrent day to &e<day>"
 
 events:
-    notify-when-available: "&6You have available rewards! Use &f/reward &6to open the menu"
+  notify-when-available: "&6You have available rewards! Use &f/reward &6to open the menu"
 
 claim:
-    already-claimed: "&cYou have already claimed this reward"
-    available-soon: "&cThis reward will be available soon"
-    not-available: "&cYou can't claim this reward yet"
+  already-claimed: "&cYou have already claimed this reward"
+  available-soon: "&cThis reward will be available soon"
+  not-available: "&cYou can't claim this reward yet"
 ```
 
 </details>
@@ -295,9 +295,9 @@ gui:
 
 You can use custom head textures in the GUI configuration. This feature allows you to set custom head for items in the GUI. To use this feature, you need to change `material` field. Plugin have some other types of custom player heads:
 
--   **URL** - Link to head texture
--   **UUID** - UUID of player
--   **BASE64** - Base64 texture string
+- **URL** - Link to head texture
+- **UUID** - UUID of player
+- **BASE64** - Base64 texture string
 
 ```yaml
 gui:

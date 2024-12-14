@@ -18,5 +18,5 @@ java -DDivineMC.EnableReloadCommand=true -jar divinemc.jar
 
 #### DivineMC.EnableReloadCommand
 
--   **default**: `unset`
--   **description**: Enables the `/reload` command. This command is disabled by default because it can cause issues with plugins and the server itself. Use it at your own risk.
+- **default**: `unset`
+- **description**: Enables the `/reload` command. This command is disabled by default because it can cause issues with plugins and the server itself. Use it at your own risk.
