@@ -23,6 +23,9 @@ import "@nolebase/vitepress-plugin-git-changelog/client/style.css";
 import "@nolebase/vitepress-plugin-enhanced-mark/client/style.css";
 import "./patches/enhanced-mark-patch.css";
 
+import ToastPlugin from "vue-toast-notification";
+import "vue-toast-notification/dist/theme-bootstrap.css";
+
 import { CodeTabsClientPlugin } from "../codetabs/CodeTabsClientPlugin";
 
 import SocialBlock from "../../components/discord/DiscordBlock.vue";
@@ -47,6 +50,7 @@ export default {
     app.use(NolebaseInlineLinkPreviewPlugin);
     app.use(NolebaseGitChangelogPlugin);
     app.use(CodeTabsClientPlugin());
+    app.use(ToastPlugin);
 
     app.provide(InjectEnhancedReadabilities, {
       layoutSwitch: {

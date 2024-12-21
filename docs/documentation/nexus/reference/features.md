@@ -2,17 +2,17 @@
 outline: deep
 ---
 
+<script setup>
+  import CommandsTable from '../../../components/nexus/CommandsTable.vue'
+</script>
+
 # Features
 
 ## Commands
 
 Nexus has a lot of commands that you can use. Here is a list of all the commands that are available in Nexus:
 
-::: warning
-
-In progress...
-
-:::
+<CommandsTable />
 
 ### Configuring commands
 
